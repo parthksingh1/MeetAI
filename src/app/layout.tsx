@@ -20,13 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <TRPCReactProvider>
-    <html lang="en">
+     <html lang="en">
       <body
-        className={`${inter.className} antialiased`}
-      >
+        className={`${inter.className} antialiased`}>
         {children}
       </body>
-    </html>
+     </html>
     </TRPCReactProvider>
   );
 }
