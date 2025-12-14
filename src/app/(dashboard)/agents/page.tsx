@@ -17,11 +17,11 @@ interface Props {
 const Page = async ({searchParams}: Props) => {
     const filters = await loadSearchParams(searchParams);
 
-    const seesion = await auth.api.getSession({
+    const session = await auth.api.getSession({
             headers: await headers(),
         });
     
-        if (!seesion) {
+        if (!session) {
             redirect("/sign-in");
         }
 
