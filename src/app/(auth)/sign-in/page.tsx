@@ -4,11 +4,11 @@ import {redirect} from 'next/navigation';
 import { auth } from '@/lib/auth';
 
 const Page = async () => {
-  const seesion = await auth.api.getSession({
+  const session = await auth.api.getSession({
           headers: await headers(),
       });
   
-      if (!!seesion) {
+      if (!!session) {
           redirect("/");
       }
 
